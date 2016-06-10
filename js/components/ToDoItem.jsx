@@ -12,9 +12,11 @@ module.exports = React.createClass({
 
 const styles = StyleSheet.create({
   toDoItem: {
-    background: 'rgba(0, 0, 0, 0.003)',
-    boxShadow: 'inset 0 -2px 1px rgba(0, 0, 0, 0.03)',
-    fontWeight: 'bold',
-    listStyle: 'none'
+    borderBottom: '1px solid #ededed',
+    color: '#4d4d4d',
+    fontWeight: '300',
+    listStyle: 'none',
+    lineHeight: '3em',
+    textIndent: '60px'
   }
 })

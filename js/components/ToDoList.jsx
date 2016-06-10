@@ -17,6 +17,8 @@ module.exports = React.createClass({
 
 const styles = StyleSheet.create({
   toDoList: {
-    padding: '25px'
+    borderTop: '1px solid #e6e6e6',
+    margin: '0',
+    padding: '0'
   }
 })

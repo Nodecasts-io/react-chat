@@ -8,7 +8,7 @@ module.exports = React.createClass({
   render: function(){
     return (
       <form >
-        <input className={css(styles.toDoInput)} type="text" placeholder="Enter To Do Item here"></input>
+        <input className={css(styles.toDoInput)} type="text" placeholder="What needs to be done?"></input>
       </form>
     )
   }
@@ -16,10 +16,14 @@ module.exports = React.createClass({
 
 const styles = StyleSheet.create({
   toDoInput: {
-    border: '1px solid #333',
-    borderRadius: '3px',
-    display: 'block',
-    height: '50px',
+    background: 'rgba(0, 0, 0, 0.0003)',
+    border: 'none',
+    boxShadow: 'inset 0 -2px 1px rgba(0,0,0,0.03)',
+    boxSizing: 'border-box',
+    fontSize: '24px',
+    margin: '0',
+    outline: 'none',
+    padding: '16px 16px 16px 60px',
     width: '100%'
   }
 })

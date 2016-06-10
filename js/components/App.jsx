@@ -9,9 +9,12 @@ module.exports = React.createClass({
   displayName: 'ToDoApplication',
   render: function(){
     return (
-      <div className={css(styles.app)}>
-        <ToDoList></ToDoList>
-        <ToDoForm></ToDoForm>
+      <div>
+        <h1 className={css(styles.header)}>todos</h1>
+        <div className={css(styles.app)}>
+          <ToDoForm></ToDoForm>
+          <ToDoList></ToDoList>
+        </div>
       </div>
     )
   }
@@ -19,8 +22,15 @@ module.exports = React.createClass({
 
 const styles = StyleSheet.create({
   app: {
-    backgroundColor: '#EEE',
-    fontSize: '18px',
+    backgroundColor: '#FFF',
+    boxShadow: '0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1)',
+    fontSize: '24px',
     padding: '25px'
+  },
+  header: {
+    color: 'rgba(175, 47, 47, 0.15)',
+    fontSize: '100px',
+    fontWeight: '100',
+    textAlign: 'center'
   }
 })
