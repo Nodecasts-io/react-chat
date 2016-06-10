@@ -3,23 +3,26 @@
 import React from 'react'
 import { StyleSheet, css } from 'aphrodite'
 
-module.exports = React.createClass({
-  displayName: 'ToDoForm',
+class ToDoForm extends React.Component {
+  constructor(props) {
+    super(props)
+    this.displayName = 'ToDoForm'
+  }
 
 
-  handleNewTodoKeyDown: function(event) {
+  handleNewTodoKeyDown(event) {
     if (event.keyCode !== 13) {
       return
     }
 
     event.preventDefault()
 
-    this.setState({
-      items: this.state.items.concat([event.target.value])
-    })
-  },
+    // this.setState({
+    //   items: this.state.items.concat([event.target.value])
+    // })
+  }
 
-  render: function(){
+  render() {
     return (
       <form >
         <input
@@ -32,7 +35,7 @@ module.exports = React.createClass({
       </form>
     )
   }
-})
+}
 
 const styles = StyleSheet.create({
   toDoInput: {
@@ -47,3 +50,5 @@ const styles = StyleSheet.create({
     width: '100%'
   }
 })
+
+export default ToDoForm

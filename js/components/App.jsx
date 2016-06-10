@@ -5,9 +5,12 @@ import ToDoList from './ToDoList.jsx'
 import ToDoForm from './ToDoForm.jsx'
 import { StyleSheet, css } from 'aphrodite'
 
-module.exports = React.createClass({
-  displayName: 'ToDoApplication',
-  render: function(){
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.displayName = 'ToDoApplication'
+  }
+  render() {
     return (
       <div>
         <h1 className={css(styles.header)}>todos</h1>
@@ -18,7 +21,7 @@ module.exports = React.createClass({
       </div>
     )
   }
-})
+}
 
 const styles = StyleSheet.create({
   app: {
@@ -34,3 +37,5 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   }
 })
+
+export default App

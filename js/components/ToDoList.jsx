@@ -3,16 +3,16 @@
 import React from 'react'
 import { StyleSheet, css } from 'aphrodite'
 
-module.exports = React.createClass({
-  displayName: 'ToDoList',
-
-  getInitialState: function() {
-    return {
+class ToDoList extends React.Component {
+  constructor(props) {
+    super(props)
+    this.displayName = 'ToDoList'
+    this.state = {
       items: ["Learn React.js!"]
     }
-  },
+  }
 
-  render: function(){
+  render() {
     const toDoItems = this.state.items.map((item) => {
       return <li className={css(styles.toDoItem)}>{item}</li>
     })
@@ -22,7 +22,7 @@ module.exports = React.createClass({
       </ul>
     )
   }
-})
+}
 
 const styles = StyleSheet.create({
   toDoList: {
@@ -39,3 +39,5 @@ const styles = StyleSheet.create({
     textIndent: '60px'
   }
 })
+
+export default ToDoList
