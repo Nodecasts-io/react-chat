@@ -14,7 +14,6 @@ module.exports = React.createClass({
 
     event.preventDefault()
 
-console.log(this.state)
     this.setState({
       items: this.state.items.concat([event.target.value])
     })
