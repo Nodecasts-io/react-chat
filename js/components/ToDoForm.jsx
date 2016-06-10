@@ -4,11 +4,11 @@ import React from 'react'
 import { StyleSheet, css } from 'aphrodite'
 
 class ToDoForm extends React.Component {
+
   constructor(props) {
     super(props)
     this.displayName = 'ToDoForm'
   }
-
 
   handleNewTodoKeyDown(event) {
     if (event.keyCode !== 13) {
