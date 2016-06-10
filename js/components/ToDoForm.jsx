@@ -5,10 +5,31 @@ import { StyleSheet, css } from 'aphrodite'
 
 module.exports = React.createClass({
   displayName: 'ToDoForm',
+
+
+  handleNewTodoKeyDown: function(event) {
+    if (event.keyCode !== 13) {
+      return
+    }
+
+    event.preventDefault()
+
+console.log(this.state)
+    this.setState({
+      items: this.state.items.concat([event.target.value])
+    })
+  },
+
   render: function(){
     return (
       <form >
-        <input className={css(styles.toDoInput)} type="text" placeholder="What needs to be done?"></input>
+        <input
+          className={css(styles.toDoInput)}
+          type="text"
+          placeholder="What needs to be done?"
+          onKeyDown={this.handleNewTodoKeyDown}
+        >
+        </input>
       </form>
     )
   }
