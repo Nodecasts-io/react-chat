@@ -1,9 +1,10 @@
 'use strict'
 
 import React from 'react'
-var ToDoItem = require('./ToDoItem.jsx')
+import ToDoItem from './ToDoItem.jsx'
 
 module.exports = React.createClass({
+  displayName: 'ToDoList',
   render: function(){
     return (
       <ul>
