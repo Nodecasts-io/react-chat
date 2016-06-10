@@ -1,2 +1,2 @@
-# react-chat
-A chat app built with react, redux, webpack and aphrodite
+# react-todo
+A todo app built with react, redux, webpack and aphrodite
