@@ -8,8 +8,6 @@ import App from './components/App.jsx'
 let store = createStore(todoApp)
 
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <App items={store.getState()} />,
   document.getElementById('content')
 )
