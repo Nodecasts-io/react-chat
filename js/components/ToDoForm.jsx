@@ -23,6 +23,8 @@ class ToDoForm extends React.Component {
       type: 'ADD_TODO',
       text: event.target.value
     })
+
+    event.target.value = ''
   }
 
   render () {

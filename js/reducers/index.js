@@ -1,9 +1,7 @@
-const todo = (state, action) => {
+const todo = (state = ['Learn React.js!'], action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      return {
-        items: state.items.concat([action.item])
-      }
+      return state.concat([action.text])
     default:
       return state
   }
