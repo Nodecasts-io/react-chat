@@ -5,15 +5,15 @@ import { StyleSheet, css } from 'aphrodite'
 
 class ToDoList extends React.Component {
 
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.displayName = 'ToDoList'
     this.state = {
-      items: ["Learn React.js!"]
+      items: ['Learn React.js!']
     }
   }
 
-  render() {
+  render () {
     const toDoItems = this.state.items.map((item) => {
       return <li className={css(styles.toDoItem)}>{item}</li>
     })

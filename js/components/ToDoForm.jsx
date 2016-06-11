@@ -5,12 +5,12 @@ import { StyleSheet, css } from 'aphrodite'
 
 class ToDoForm extends React.Component {
 
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.displayName = 'ToDoForm'
   }
 
-  handleNewTodoKeyDown(event) {
+  handleNewTodoKeyDown (event) {
     if (event.keyCode !== 13) {
       return
     }
@@ -22,13 +22,13 @@ class ToDoForm extends React.Component {
     // })
   }
 
-  render() {
+  render () {
     return (
       <form >
         <input
           className={css(styles.toDoInput)}
-          type="text"
-          placeholder="What needs to be done?"
+          type='text'
+          placeholder='What needs to be done?'
           onKeyDown={this.handleNewTodoKeyDown}
         >
         </input>

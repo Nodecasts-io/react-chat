@@ -6,18 +6,18 @@ import ToDoForm from './ToDoForm.jsx'
 import { StyleSheet, css } from 'aphrodite'
 
 class App extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.displayName = 'ToDoApplication'
   }
 
-  render() {
+  render () {
     return (
       <div>
         <h1 className={css(styles.header)}>todos</h1>
         <div className={css(styles.app)}>
-          <ToDoForm></ToDoForm>
-          <ToDoList></ToDoList>
+          <ToDoForm />
+          <ToDoList />
         </div>
       </div>
     )
