@@ -17,7 +17,7 @@ class App extends React.Component {
         <h1 className={css(styles.header)}>todos</h1>
         <div className={css(styles.app)}>
           <ToDoForm />
-          <ToDoList />
+          <ToDoList items={["Learn React.js!"]} />
         </div>
       </div>
     )

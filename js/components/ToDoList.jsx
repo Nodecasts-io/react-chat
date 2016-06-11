@@ -1,6 +1,7 @@
 'use strict'
 
 import React from 'react'
+import { connect } from 'react-redux'
 import { StyleSheet, css } from 'aphrodite'
 
 class ToDoList extends React.Component {
@@ -8,13 +9,10 @@ class ToDoList extends React.Component {
   constructor (props) {
     super(props)
     this.displayName = 'ToDoList'
-    this.state = {
-      items: ['Learn React.js!']
-    }
   }
 
   render () {
-    const toDoItems = this.state.items.map((item) => {
+    const toDoItems = this.props.items.map((item) => {
       return <li className={css(styles.toDoItem)}>{item}</li>
     })
     return (
@@ -24,6 +22,12 @@ class ToDoList extends React.Component {
     )
   }
 }
+
+function mapStateToProps(state) {
+  return { items: state }
+}
+
+ToDoList = connect(mapStateToProps)(ToDoList)
 
 const styles = StyleSheet.create({
   toDoList: {

@@ -1,6 +1,8 @@
+
 'use strict'
 
 import React from 'react'
+import { connect } from 'react-redux'
 import { StyleSheet, css } from 'aphrodite'
 
 class ToDoForm extends React.Component {
@@ -17,9 +19,10 @@ class ToDoForm extends React.Component {
 
     event.preventDefault()
 
-    // this.setState({
-    //   items: this.state.items.concat([event.target.value])
-    // })
+    this.props.dispatch({
+      type: 'ADD_TODO',
+      text: event.target.value
+    })
   }
 
   render () {
@@ -29,13 +32,15 @@ class ToDoForm extends React.Component {
           className={css(styles.toDoInput)}
           type='text'
           placeholder='What needs to be done?'
-          onKeyDown={this.handleNewTodoKeyDown}
+          onKeyDown={this.handleNewTodoKeyDown.bind(this)}
         >
         </input>
       </form>
     )
   }
 }
+
+ToDoForm = connect()(ToDoForm)
 
 const styles = StyleSheet.create({
   toDoInput: {

@@ -5,9 +5,11 @@ import { createStore } from 'redux'
 import todoApp from './reducers'
 import App from './components/App.jsx'
 
-let store = createStore(todoApp)
+let store = createStore(todoApp, ['Learn React.js!'])
 
 render(
-  <App items={store.getState()} />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('content')
 )
